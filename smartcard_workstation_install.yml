@@ -1,0 +1,8 @@
+---
+
+- name: Smartcard Workstation Install
+  hosts: all
+  sudo: yes
+  tasks:
+    - name: Execute the script
+      command: sh ./config-client-for-smart-card-auth.sh /etc/ipa/ca.crt
