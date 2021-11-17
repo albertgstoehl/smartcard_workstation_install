@@ -3,16 +3,8 @@
 - name: Smartcard Workstation Install
   hosts: all
   tasks:
-          - name: copy a test file
-            copy:
-                src: /tmp/config-client-for-smart-card-auth.sh
-                dest: /tmp/config-client-for-smart-card-auth.sh
-                owner: root
-                group: root
-                mode: '0644'
-
           - name: List files and folder in home directory
-            shell: 'ls -l'
+            shell: 'pwd'
             register: command_output
 
           - debug:
