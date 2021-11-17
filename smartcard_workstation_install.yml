@@ -4,4 +4,4 @@
   hosts: all
   tasks:
     - name: Execute the script
-      command: sh ./config-client-for-smart-card-auth.sh /etc/ipa/ca.crt
+      command: ls
