@@ -4,4 +4,8 @@
   hosts: all
   tasks:
     - name: Execute the script
-      command: ls
+      command: ls -l
+      register: command_output
+
+    - debug:
+      var: command_output.stdout_lines
